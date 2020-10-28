@@ -17,9 +17,9 @@ import { AngularFireDatabase } from "@angular/fire/database";
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css']
 })
-export class RegistrationComponent  {
+export class RegistrationComponent implements OnInit  {
   
-
+  
   constructor(
     private auth: EmplyeeserviceService,
     private router: Router,
@@ -28,12 +28,15 @@ export class RegistrationComponent  {
     private toastr: ToastrService,
   ) {}
 
-  
+  ngOnInit(){
+    
+  }
 
   onSubmit(f: NgForm) {
     const { email, password, username, country, bio, name } = f.form.value;
 
     // further sanitization - do here
+    
 
     this.auth.signUp(email, password)
       .then((res) => {

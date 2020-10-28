@@ -4,7 +4,7 @@ import { environment } from "./../../environments/environment";
 import { AuthRoutingModule } from './auth-routing.module';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
@@ -21,6 +21,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
     AngularFireDatabaseModule,
+    ReactiveFormsModule,
     
   ]
 })
