@@ -1,0 +1,103 @@
+<section class="blog-list mtb-40">
+    <div class="container">
+      <h1>Courses</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="blog-box">
+            <img src="assets/images/img 3.jpg" alt="blog1" />
+            <h3>Angular 10 Full Course</h3>
+            <p>by <span>WebMaster== Tutorials</span> </p>
+            <p>Angular 10 released in October 2020, just like it was scheduled. The new features of the framework are the updated form of Node 10..</p>
+            <a routerLink="/course/1" routerLinkActive="active" class="btn btn-danger">Read more...</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="blog-box">
+            <img src="assets/images/img 22.png" alt="blog1" />
+            <h3>Python Full Course</h3>
+            <p>by <span>WebMaster Tutorials</span> </p>
+            <p>Python is one of the high-level general programming languages, interpreted, easy to use,complete and powerful. It is an object..</p>
+            <a routerLink="/course/2" routerLinkActive="active" class="btn btn-danger">Read more...</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="blog-box">
+            <img src="assets/images/img 3.jpg" alt="blog1" />
+            <h3>Angular Material course</h3>
+            <p>by <span>WebMaster Tutorials</span> </p>
+            <p>Angular 10 released in October 2020, just like it was scheduled. The new features of the framework are the updated form of Node 10..</p>
+            <a href="detail.html" class="btn btn-danger">Read more...</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="blog-box">
+            <img src="assets/images/img 4.jpg" alt="blog1" />
+            <h3>Entity Framework Course</h3>
+            <p>by <span>WebMaster Tutorials</span> </p>
+            <p>Angular 107 released in October 2020, just like it was scheduled. The new features of the framework are the updated form of Node 10..</p>
+            <a href="detail.html" class="btn btn-danger">Read more...</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="blog-box">
+            <img src="assets/images/img 5.png" alt="blog1" />
+            <h3>CSS Course</h3>
+            <p>by <span>WebMaster Tutorials</span> </p>
+            <p>Angular 10 released in October2020, just like it was scheduled. The new features of the framework are the updated form of Node 10..</p>
+            <a href="detail.html" class="btn btn-danger">Read more...</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="blog-box">
+            <img src="assets/images/img 6.png" alt="blog1" />
+            <h3>TypeSript Course</h3>
+            <p>by <span>WebMaster Tutorials</span> </p>
+            <p>Angular 10 released in October 2020, just like it was scheduled. The new features of the framework are the updated form of Node 10..</p>
+            <a href="detail.html" class="btn btn-danger">Read more...</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+                                   
+  Theme integration of course detail page
+  
+  Edit the file src/app/courses/course-detail/course-detail.component.html
+  
+  Also keep two components course-recent and course-categories on this page for showing recent course post and categories.
+  
+  Like below:
+  
+  <section class="blog-detail mtb-40">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="blog-left">
+            <h1>Angular 10 Full Course</h1>
+            <div class="posted-on">
+                <p>by <span>WebMaster...!!!!!</span> on <span>March 22, 2020</span></p>
+            </div>
+            <div class="detail-img">
+               <img src="assets/images/img 3.jpg" alt="blog1" />
+            </div>
+            <div class="blog-desc">
+              <p>The Angular is the newest form of the AngularJS, developed by Google, which is an open-source front-end development platform used for building mobile and desktop web applications. Angular is rewritten by the same team that built AngularJS.</p>
+                              <p>It is a JavaScript framework for building web applications and apps in JavaScript, HTML, and TypeScript, which is a superset of JavaScript. The Angular now comes with every latest feature you need to build a complex and sophisticated web or mobile application. It contains features like component, Directives, Forms, Pipes, HTTP Services, Dependency Injection and many more. </p>
+  <p>Angular is the next big deal. Being the successor of the massive successful AngularJS framework it’s bound to frame the future of frontend development in a similar way. The powerful features and capabilities of Angular permit you to build complex, customizable, modern, responsive and user-friendly web applications. It also enables you to create software quicker and with less effort.</p>
+  <p>As your application grows, structuring your code in a clean and maintainable and more importantly, testable way, becomes more complex. But your life becomes far easier using a framework like Angular.
+  
+  Angular 10 is the latest version of the Angular framework and simply an update to Angular 2.
+  
+  Angular is faster than AngularJS and offers a much more flexible and modular development approach. After studying this tutorial you become proficient and able to take full advantage of all those features and start developing incredible applications in a reasonable time.</p>
+   
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <app-course-recent></app-course-recent>
+          <app-course-categories></app-course-categories>
+        </div>
+      </div>
+    </div>
+  </section>
