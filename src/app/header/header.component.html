@@ -26,10 +26,13 @@
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a *ngIf="!email" routerLink="/Registration" routerLinkActive="Active" class="nav-link" >Registration</a>
-          </li>
+            <!-- <a *ngIf="!email" routerLink="/Registration" routerLinkActive="Active" class="nav-link" >Registration</a> -->
+            <!-- <buttun class="btn btn-danger" data-toggle="modal" data-target="#loginModal">Login</buttun> -->
+            <button  *ngIf="!email" routerLink="/Registration" routerLinkActive="Active" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Registration</button>
+          </li>&nbsp;&nbsp;&nbsp;
           <li class="nav-item">
-            <a *ngIf="!email" routerLink="/Login" routerLinkActive="Active" class="nav-link" >Login</a>
+            
+            <button *ngIf="!email" routerLink="/Login" routerLinkActive="Active" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Login</button>
           </li>
           <li>
             <a
