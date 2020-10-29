@@ -1,6 +1,8 @@
+import { Router } from '@angular/router';
 import { Users } from './../Users';
 import { RestService } from './../../statipages/rest.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-json',
@@ -8,28 +10,53 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./json.component.css']
 })
 export class JsonComponent implements OnInit {
+  // datasaved = false;
+  // allbooks : Observable<Users[]>;
+  users: Users[] = [];
+  firstname: any;
+  p: number = 1;
+  constructor(private rs: RestService, private router:Router ) { }
 
-  constructor(private rs: RestService) { }
-
-  ngOnInit(): void {
+  ngOnInit() {
     this.rs.getUsers().subscribe
       (
         (res) => {
           this.users = res;
-      },
-        (err) =>
-        {
-          console.log("Error occured :" + err);
-      }  
+        }
         
-    )
+      );
+    
   }
-  columns = ["User Id", "First Name", "Last Name", "Email", "Country"];
+  Search(){
+    if (this.firstname == "") {
+      this.ngOnInit();
+    } else {
+      this.users = this.users.filter(res => {
+        return res.firstname.toLocaleLowerCase().match(this.firstname.toLocaleLowerCase());
+      })
+    }
+  }
+  key: string = 'id';
+  reverse: boolean = false;
+  sort(key) {
+    this.key = key;
+    this.reverse = !this.reverse;
+  }
 
-  index = ["id", "FirstName", "LastName", "email", "country"];
-
-  users: Users[] = [];
-
+  deleteRow(val) {
+    if (confirm("Are you sure to delete?")) {
+      this.rs.deleteUser(val).subscribe(data => {
+      });
+      this.rs.getUsers().subscribe((res) => {
+        this.users = res;
+      });
+    }
+   
+  }
+  update(id) {
+    this.router.navigate(['/update', id]);
+  }
+  
 
 
 

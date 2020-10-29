@@ -11,6 +11,9 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 
+
+
+
 @NgModule({
   declarations: [RegistrationComponent, LoginComponent],
   imports: [
@@ -22,6 +25,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     AngularFireStorageModule,
     AngularFireDatabaseModule,
     ReactiveFormsModule,
+    
+    
     
   ]
 })

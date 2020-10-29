@@ -1,54 +1,59 @@
 {
-    "Users" : [
-        {
-            "id":"1",
-            "FirstName":"Vrushabh",
-            "LastName":"Dhatrak",
-            "email": "vrushabhdhatrak10@gmail.com",
-            "country":"India"
-        },
-        {
-            "id":"2",
-            "FirstName":"Vaibhav",
-            "LastName":"Nikumbh",
-            "email": "vxyz@gmail.com",
-            "country":"India"
-        },
-        {
-            "id":"3",
-            "FirstName":"Akash",
-            "LastName":"Thete",
-            "email": "Akash@gmail.com",
-            "country":"NZ"
-        },
-        {
-            "id":"4",
-            "FirstName":"Jayesh",
-            "LastName":"Kadam",
-            "email": "Jaysh0@gmail.com",
-            "country":"USA"
-        },
-        {
-            "id":"5",
-            "FirstName":"Tejas",
-            "LastName":"Sangle",
-            "email": "Tejas@gmail.com",
-            "country":"Japan"
-        },
-        {
-            "id":"6",
-            "FirstName":"Samar",
-            "LastName":"Sanap",
-            "email": "Sammy@gmail.com",
-            "country":"India"
-        },
-        {
-            "id":"7",
-            "FirstName":"Rahul",
-            "LastName":"Garg",
-            "email": "Rahul0@gmail.com",
-            "country":"Russia"
-        }
-        
-    ]
+  "Users": [
+    {
+      "id": "1",
+      "firstname": "Vrushabh",
+      "lastname": "Dhatrak",
+      "email": "vrushabhdhatrak10@gmail.com",
+      "country": "India"
+    },
+    {
+      "id": "2",
+      "firstname": "Vaibhav",
+      "lastname": "Nikumbh",
+      "email": "vxyz@gmail.com",
+      "country": "India"
+    },
+    {
+      "headers": {
+        "normalizedNames": {},
+        "lazyUpdate": null,
+        "headers": {},
+        "lazyInit": null
+      },
+      "id": "3",
+      "firstname": "Akash123",
+      "lastname": "Garg",
+      "email": "akash@gmail.com",
+      "country": "IND"
+    },
+    {
+      "id": "4",
+      "firstname": "Jayesh",
+      "lastname": "Kadam",
+      "email": "Jaysh0@gmail.com",
+      "country": "USA"
+    },
+    {
+      "id": "5",
+      "firstname": "Tejas",
+      "lastname": "Sangle",
+      "email": "Tejas@gmail.com",
+      "country": "Japan"
+    },
+    {
+      "id": "6",
+      "firstname": "Samar",
+      "lastname": "Sanap",
+      "email": "Sammy@gmail.com",
+      "country": "India"
+    },
+    {
+      "id": "7",
+      "firstname": "Rahul",
+      "lastname": "Garg",
+      "email": "Rahul0@gmail.com",
+      "country": "Russia"
+    }
+  ]
 }

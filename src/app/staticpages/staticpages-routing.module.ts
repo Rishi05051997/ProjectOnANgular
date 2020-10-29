@@ -1,3 +1,4 @@
+import { UpdateComponent } from './update/update.component';
 import { JsonComponent } from './json/json.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PageComponent } from './page/page.component';
@@ -11,6 +12,8 @@ const routes: Routes = [
   { path: 'page/:slug', component: PageComponent },
   { path: 'contact', component: ContactUsComponent },
   { path: 'json', component: JsonComponent },
+  { path: 'update/:id', component: UpdateComponent },
+
   
   
 ];

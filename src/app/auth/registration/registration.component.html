@@ -15,14 +15,14 @@
                 <input
                   type="name"
                   class="form-control"
-                  
                   id="name"
                   name="name"
                   placeholder="Enter Name"
+                  #name="ngModel"
                   required
                   ngModel
                 />
-                <div class="error">Name is required...!!!</div>
+                <span class="help-bpx" *ngIf="name.touched && !name.valid">Please Enter Name......!!!!!!</span>
               </div>
              
             </div>
@@ -36,11 +36,13 @@
                   id="email"
                   name="email"
                   placeholder="Enter Email"
+                  #email="ngModel"
                   required
                   ngModel
-                  email
+                  
                 />
-                <div class="error" name="email">Email is required...!!!</div>
+                <span class="help-bpx" *ngIf="email.touched && !email.valid">Please Enter Email......!!!!!!</span>
+                
               </div>
             </div>
 
@@ -55,10 +57,11 @@
                   id="password"
                   name="password"
                   placeholder="Enter password"
+                  #password="ngModel"
                   required
                   ngModel
                 />
-                <small id="emailHelp" class="form-text text-muted"
+                <small class="help-bpx" *ngIf="password.touched && !password.valid"
                   >Minimum length of the password should be 6 or more</small
                 >
               </div>
@@ -113,7 +116,7 @@
 
             <div class="text-center">
               <button
-                [disabled]="!f.valid"
+                [disabled]="!f.form.valid"
                 class="btn btn-primary"
                 type="submit"
               >

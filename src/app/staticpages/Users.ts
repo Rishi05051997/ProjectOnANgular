@@ -8,11 +8,11 @@ export class Users
     lastname: string;
     email: string;
     country: string;
-    constructor(id, FirstName, LastName, email, country)
+    constructor(id, firstname, lastname, email, country)
 {
         this.id = id;
-        this.firstname = FirstName;
-        this.lastname = LastName;
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.email = email;
         this.country = country;
 }

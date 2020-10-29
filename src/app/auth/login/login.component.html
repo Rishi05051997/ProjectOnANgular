@@ -15,8 +15,17 @@
                 <label for="email" class="col-sm-3 col-form-label">Email</label>
   
                 <div class="col-sm-9">
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" ngModel
-                    required />
+                  <input type="email" 
+                  class="form-control" 
+                  id="email" 
+                  name="email" 
+                  placeholder="Enter Email" 
+                  #email="ngModel"
+                  ngModel
+                  required 
+                  />
+                <span class="help-bpx" *ngIf="email.touched && !email.valid">Please Enter Email......!!!!!!</span>
+
                 </div>
   
               </div>
@@ -35,7 +44,7 @@
               </div>
   
               <div class=" text-center">
-                <button [disabled]="!f.valid" class="btn btn-primary " type="submit">
+                <button [disabled]="!f.form.valid" class="btn btn-primary " type="submit">
                   Sign In
                 </button>
               </div>
