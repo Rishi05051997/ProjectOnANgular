@@ -2,6 +2,7 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
 @import "~ngx-toastr/toastr";
+@import "~@ng-select/ng-select/themes/default.theme.css";
  
 h1 {font-size: 2.4rem;margin-bottom: 30px;}
 .bg-blue {background-color:#ef4545;}
@@ -66,3 +67,5 @@ footer {background-color: #000;color:#fff; padding:20px;}
 @media (max-width: 767px) {
 .intro-text {display: none;}
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

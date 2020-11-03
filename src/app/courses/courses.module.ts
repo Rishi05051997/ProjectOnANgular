@@ -7,13 +7,18 @@ import { CourseListComponent } from './course-list/course-list.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { CourseRecentComponent } from './course-recent/course-recent.component';
 import { CourseCategoriesComponent } from './course-categories/course-categories.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [CourseFeaturedComponent, CourseListComponent, CourseDetailComponent, CourseRecentComponent, CourseCategoriesComponent],
   imports: [
     CommonModule,
-    CoursesRoutingModule
+    CoursesRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+    
+    
   ],
   exports: [
     CourseFeaturedComponent,

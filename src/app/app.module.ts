@@ -1,5 +1,6 @@
+import { NgSelectModule } from '@ng-select/ng-select';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
 import { EmplyeeserviceService } from './auth/employeeservice.service';
 import {  HttpClientModule } from '@angular/common/http';
 
@@ -29,6 +30,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { SignupComponent } from './signup/signup.component';
+import { UserprofileComponent } from './userprofile/userprofile.component'
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 
 
@@ -38,6 +42,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     BannerComponent,
     HeaderComponent,
     FooterComponent,
+    SignupComponent,
+    UserprofileComponent,
     
     
   ],
@@ -64,6 +70,13 @@ import { NgxPaginationModule } from 'ngx-pagination';
     Ng2SearchPipeModule,
     Ng2OrderModule,
     NgxPaginationModule,
+   // slider
+    
+    // multiselect
+    NgSelectModule,
+    NgMultiSelectDropDownModule.forRoot(),
+    
+ 
     
   
     
@@ -87,6 +100,10 @@ import { NgxPaginationModule } from 'ngx-pagination';
   
     AngularFireStorageModule,
     AngularFireDatabaseModule,
+    SignupComponent,
+    UserprofileComponent,
+    
+    
   
   ],
   providers: [EmplyeeserviceService],

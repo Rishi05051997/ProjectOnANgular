@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireStorage } from '@angular/fire/storage';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { EmplyeeserviceService } from 'src/app/auth/employeeservice.service';
 
 @Component({
   selector: 'app-course-featured',
@@ -7,9 +13,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseFeaturedComponent implements OnInit {
 
-  constructor() { }
+   constructor(){}
 
   ngOnInit(): void {
   }
+ 
+
 
 }

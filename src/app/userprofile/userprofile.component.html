@@ -1,0 +1,42 @@
+<div class="container mtb-40">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="card" style="width: 18rem; border: 0px;">
+                <div class="card-body">
+                  <h3 class="card-title" style="color:lightskyblue">Profile</h3>
+                  <img
+                      src={{data.picture}}
+                      width="300"
+                      height="300"
+
+                      
+                    />
+                    
+                 
+                  
+                  <a href="#" class="btn btn-warning">Edit Photo</a>&nbsp;&nbsp;
+                  <a routerLink="/signup/{data.firstname}" (click)="update(data)" class="btn btn-warning">Edit Profile</a>
+                </div>
+              </div>
+    
+        </div>
+        <div class="col-sm-5">
+            <div class="card" style="width: 18rem;  border: 0px;">
+                <div class="card-body">
+                    <p style="line-height: 35px;">I'm {{data.firstName}} {{data.lastName}} and Im above {{data.age}} years and  you can send your emails to {{data.email}}.I lived in the {{data.state}} of {{data.country}}.I like
+                        to {{data.tags}}.And please send me newsletter, Please reach out to me on {{data.phone}}.
+                    </p>
+                    <button class="btn btn-success">I Agree</button>
+                  
+                </div>
+              </div>
+    
+        </div>
+    </div>
+    
+    
+    
+
+    
+</div>
+

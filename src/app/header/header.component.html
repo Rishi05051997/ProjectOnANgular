@@ -1,50 +1,35 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-blue">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/images/logo.png" alt="Angular Project" />
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a routerLink="/" routerLinkActive="Active" class="nav-link" >Home</a>
-          </li>
-          <li class="nav-item">
-            <a [routerLink]="['/course']" routerLinkActive="Active" class="nav-link" >Courses</a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="/page/about" routerLinkActive="Active" class="nav-link" >About Us</a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="/contact" routerLinkActive="Active" class="nav-link" >Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="/json" routerLinkActive="Active" class="nav-link" >Employee</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <!-- <a *ngIf="!email" routerLink="/Registration" routerLinkActive="Active" class="nav-link" >Registration</a> -->
-            <!-- <buttun class="btn btn-danger" data-toggle="modal" data-target="#loginModal">Login</buttun> -->
-            <button  *ngIf="!email" routerLink="/Registration" routerLinkActive="Active" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Registration</button>
-          </li>&nbsp;&nbsp;&nbsp;
-          <li class="nav-item">
-            
-            <button *ngIf="!email" routerLink="/Login" routerLinkActive="Active" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Login</button>
-          </li>
-          <li>
-            <a
-          *ngIf="email"
-          (click)="handleSignOut()"
-          class="nav-item"
-          >Log Out</a>
-          </li>
+<div class="header1">
+  <div class="container">
+    <div class="header1-main Home">
+      <span class="menu"><img src="./../../assets/images1/icon.png"/></span>
+      <div class="header1-navg">
+        <ul class="res">
+          <li><a  href="index.html">HOME</a></li>
           
+          <li><a routerLink="/page/about" routerLinkActive="Active" class="nav-link" >ABOUT US</a></li>
+          <li><a [routerLink]="['/course']" routerLinkActive="Active" class="nav-link" >COURSES</a></li>
+          <li><a href="clients.html">CLIENTS</a></li>
+          <li><a routerLink="/json" routerLinkActive="Active" class="nav-link" >EMPLOYEE</a></li>
+          <li><a routerLink="/contact" routerLinkActive="Active" class="nav-link" >CONTACT US</a></li>
       </ul>
-  
+       <script>
+                                                   $( "span.menu").click(function() {
+                                                                                     $(  "ul.res" ).slideToggle("slow", function() {
+                                                                                      // Animation complete.
+                                                                                      });
+                                                                                      });
+                                              </script>
+      
+
+        
       </div>
     </div>
-  </nav>
+  </div>
+
+</div>
+
+
+
+  
+  
   <router-outlet></router-outlet>

@@ -1,0 +1,90 @@
+.header1{
+    background:url(./../../../assets/images1/banner2.jpg)no-repeat;
+    background-size:cover;
+    min-height:600px;
+}
+.header1-bottom {
+    padding-top: 10em;
+    position:relative;
+    margin-left: 9em;
+}
+.header1-bottom h1 {
+   color: #fff;
+   font-size: 3em;
+   font-weight: 600;
+   font-style: italic;
+   margin: 0em 0em 1em 0em;
+}
+.header1-bottom form input[type="text"] {
+   width: 68%;
+   padding: 1em;
+   font-size: 1.1em;
+   font-weight: 300;
+   color: #C7C7C7;
+   outline: none;
+   margin-bottom:2em;
+   font-style: italic;
+   border: none;
+}
+.header1-bottom form input[type="submit"] {
+   width: 14%;
+   padding: 1em;
+   font-size: 1em;
+   font-weight: 300;
+   margin-left: 5em;
+   outline: none;
+   border: none;
+   border-radius: 2px;
+   background: url(./../../../assets/images1/search.png)no-repeat 19px 18px #4acaff;
+   color: #fff;
+   cursor: pointer;
+   font-style: italic;
+}
+.header1-bottom form input[type="submit"]:hover {
+       background-color:#999;
+       transition: all 0.3s ease;
+   -webkit-transition: all 0.3s ease;
+   -moz-transition: all 0.3s ease;
+   -o-transition: all 0.3s ease;
+}
+input[type="checkbox"] {
+   cursor: pointer;
+}
+label.checkbox {
+   color: #fff;
+   font-size: 14px;
+   font-style: italic;
+   font-weight: 400;
+   display: inline-block;
+}
+select {
+   width: 20%;
+   padding: 10px;
+   border: none;
+   border-radius:3px;
+   outline: none;
+   margin-left: 14em;
+   font-size: 15px;
+   font-weight: 300;
+   color: #C7C7C7;
+   font-style: italic;
+   cursor: pointer;
+}
+
+#btn1 {
+   width: 14%;
+   padding: 1em;
+   font-size: 1em;
+   font-weight: 300;
+   margin-left: 5em;
+   outline: none;
+   border: none;
+   border-radius: 2px;
+   background:no-repeat 19px 18px #4acaff;
+   color: #fff;
+   cursor: pointer;
+   font-style: italic;
+   position: relative;
+   left: 340px;
+   top: 80px;
+}

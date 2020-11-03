@@ -1,0 +1,63 @@
+.strip1[_ngcontent-gqt-c80] {
+   background: url(./../../assets/images1/blue-rib.png)no-repeat;
+   display: block;
+   padding: 3px;
+}
+.intro1{
+    background-color:#F5F5F5;
+    position:relative;
+    margin-top: -13px;
+    position: relative;
+    margin-top: 1px;
+}
+.intro1-main{
+    text-align:center;
+    padding:5em 0px;
+}
+.intro1-main h2 {
+   font-size: 2em;
+   font-weight: 400;
+   margin: 0px;
+   color:#585858;
+   font-style: italic;
+}
+.intro1-main h3 {
+   font-size: 2.7em;
+   font-weight: 400;
+   margin: 14px 0px 1em 0em;
+   color: #585858;
+}
+span.b {
+   background: url(./../../assets/images1/line.png)no-repeat;
+   display: block;
+   width: 138px;
+   height: 5px;
+   margin: 0 auto;
+}
+.intro1-main p {
+   font-size: 1.1em;
+   font-weight: 600;
+   color: #7F7F7F;
+   padding: 2em 0em 3em 0em;
+   line-height: 1.8em;
+}
+.intro1-main h4 a{
+   font-size: 15px;
+   font-weight: 600;
+   color: #4ACAFF;
+   border: 2px solid #4ACAFF;
+   width: 23%;
+   border-radius: 5px;
+   padding: 1em;
+   margin: 0 auto;
+   cursor:pointer;
+}
+.intro1-main h4 a:hover{
+          color:#999;
+          border-color: #000;
+          text-decoration:none;
+           transition: all 0.3s ease;
+   -webkit-transition: all 0.3s ease;
+   -moz-transition: all 0.3s ease;
+   -o-transition: all 0.3s ease;
+}

@@ -1,0 +1,282 @@
+<div
+  class="modal fade"
+  id="loginModal"
+  data-backdrop="static"
+  data-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="loginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <h2 class="modal-title text-white" id="loginModalLabel">
+          Register
+        </h2>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card-body">
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div>
+              <div class="text-center">
+                <label for="imagepicker" class="">
+                  <img
+                    [src]="url1"
+                    width="200"
+                    height="200"
+                    alt=""
+                    class="profile"
+                  /> </label
+                ><br /><br />
+
+                <input
+                  type="file"
+                  name="picture"
+                  multiple="{false}"
+                  formControlName="picture"
+                  class="hidden"
+                  (change)="uploadImage($event)"
+                />
+              </div>
+              <br />
+              <br />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-6">
+                <input
+                  placeholder="FirstName"
+                  type="text"
+                  class="form-control"
+                  formControlName="firstName"
+                  [ngClass]="{ 'is-invalid': submitted && h.firstName.errors }"
+                />
+                <div
+                  *ngIf="h.firstName.touched && h.firstName.errors"
+                  class="text-warning"
+                >
+                  <div *ngIf="h.firstName.errors.required">
+                    First Name is required
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-6">
+                <input
+                  placeholder="LastName"
+                  type="text"
+                  class="form-control"
+                  formControlName="lastName"
+                  [ngClass]="{ 'is-invalid': submitted && h.lastName.errors }"
+                />
+                <div
+                  *ngIf="h.lastName.touched && h.lastName.errors"
+                  class="text-warning"
+                >
+                  <div *ngIf="h.lastName.errors.required">
+                    Last Name is required
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                placeholder="Email"
+                type="text"
+                class="form-control"
+                formControlName="email"
+                [ngClass]="{ 'is-invalid': submitted && h.email.errors }"
+              />
+              <div
+                *ngIf="h.email.touched && h.email.errors"
+                class="text-warning"
+              >
+                <div *ngIf="h.email.errors.required">Email is required</div>
+                <div *ngIf="h.email.errors.email">
+                  Email must be a valid email address
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                placeholder="(541)754-3010"
+                type="text"
+                class="form-control"
+                formControlName="phone"
+                [ngClass]="{ 'is-invalid': submitted && h.phone.errors }"
+              />
+              <div
+                *ngIf="h.phone.touched && h.phone.errors"
+                class="text-warning"
+              >
+                <div *ngIf="h.phone.errors.required">Phone No is required</div>
+                <div *ngIf="h.phone.errors.phone">Phone must be a valid</div>
+              </div>
+
+              <label for="">Age</label>
+
+              <div class="slidecontainer">
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="50"
+                  class="slider-color"
+                  id="myRange"
+                />
+                <label id="slider">0</label>
+                <label id="label-right">100</label>
+              </div>
+              <input
+                name="age"
+                formControlName="age"
+                type="text"
+                class="form-control"
+                placeholder="Enter Your age"
+              />
+              <br />
+              <br />
+              <label>State:</label>
+              <select id="drp" name="state" formControlName="state">
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="other">other</option>
+              </select>
+              <br />
+
+              <br />
+
+              <label>Country:</label>
+              <select id="drp" name="country" formControlName="country">
+                <option value="India">India</option>
+                <option value="other">other</option>
+              </select>
+              <br />
+
+              <br />
+
+              <label>Address:</label>
+              <select id="drp" name="address" formControlName="address">
+                <option value="Permanant">Permanant</option>
+                <option value="Temporary">Temporary</option>
+              </select>
+              <br />
+
+              <br />
+
+              <ng-select
+                [items]="categories"
+                formControlName="tags"
+                name="tags"
+                bindLabel="name"
+                placeholder="tags"
+                appendTo="body"
+                [multiple]="true"
+              >
+              </ng-select>
+
+              <div class="form-row">
+                <div class="form-group col">
+                  <label>Password</label>
+                  <input
+                    formControlName="password"
+                    type="password"
+                    class="form-control"
+                    formControlName="password"
+                    [ngClass]="{ 'is-invalid': submitted && h.password.errors }"
+                  />
+                  <div
+                    *ngIf="h.password.touched && h.password.errors"
+                    class="text-warning"
+                  >
+                    <div *ngIf="h.password.errors.required">
+                      Password is required
+                    </div>
+                    <div *ngIf="h.password.errors.minlength">
+                      Password must be at least 6 characters
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col">
+                  <label>Confirm Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    formControlName="confirmPassword"
+                    [ngClass]="{
+                      'is-invalid': submitted && h.confirmPassword.errors
+                    }"
+                  />
+                  <div
+                    *ngIf="
+                      h.confirmPassword.touched && h.confirmPassword.errors
+                    "
+                    class="text-warning"
+                  >
+                    <div *ngIf="h.confirmPassword.errors.required">
+                      Confirm Password is required
+                    </div>
+                    <div *ngIf="h.confirmPassword.errors.mustmatch">
+                      Passwords must match
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <ng-container>
+              <div class="text-danger">Value is required.</div>
+            </ng-container>
+
+            <div class="form-group form-check">
+              <input
+                type="checkbox"
+                id="acceptTerms"
+                class="form-check-input"
+                formControlName="acceptTandC"
+                [ngClass]="{ 'is-invalid': submitted && h.acceptTandC.errors }"
+              />
+              <label for="acceptTerms" class="form-check-label"
+                >subsribe to newsletter</label
+              >
+              <div
+                *ngIf="h.acceptTandC.touched && h.acceptTandC.errors"
+                class="text-warning"
+              >
+                subsribe to newsletter is required
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="model-footer">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  data-dismiss="modal"
+                >
+                  Cancel</button
+                >&nbsp;&nbsp;
+                <button
+                  routerLink="/userprofile"
+                  (click)="saveCall()"
+                  type="button"
+                  class="btn btn-primary"
+                >
+                  Submit
+                </button>
+              </div>
+
+              <!-- <p class="text white">Value: {{ registerForm.value | json }}</p>
+                            <p class="text white">Value: {{ registerForm.valid | json }}</p> -->
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

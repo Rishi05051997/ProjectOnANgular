@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { finalize } from "rxjs/operators";
+import { PasswordChecker } from "./../../custom-validators/password-checker";
 // Angular forms
 import { NgForm } from "@angular/forms";
 
@@ -19,7 +20,9 @@ import { AngularFireDatabase } from "@angular/fire/database";
 })
 export class RegistrationComponent implements OnInit  {
   
-  
+
+
+  // Below previous Registration form
   constructor(
     private auth: EmplyeeserviceService,
     private router: Router,
